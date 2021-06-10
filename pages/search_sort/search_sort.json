@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Indexhead":"../../components/Indexhead/Indexhead"
+  }
+}

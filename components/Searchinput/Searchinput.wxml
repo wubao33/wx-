@@ -1,0 +1,4 @@
+<!--components/Searchinput/Searchinput.wxml-->
+<view class="search_input">
+<navigator class="search_url" url="../../pages/sort_goods/sort_goods" open-type="navigate">Search</navigator>
+</view>

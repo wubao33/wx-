@@ -1,0 +1,26 @@
+
+<view class="search_row">
+  <input value="{{inputValue}}"  placeholder="请输入搜索内容" bindinput="handleInput"></input>
+  <button hidden="{{!isFocus}}" bindtap="handleClear">clear</button>
+</view>
+<!-- 商品搜索列表 -->
+<view wx:if="{{SearchGoodsList.length>0}}" class="goods">
+<navigator 
+class="goods_item"
+wx:for="{{SearchGoodsList}}"
+wx:key="*this"
+url="/pages/goods_detail/goods_detail?goods_id={{item.id}}"
+>
+  <!-- 左侧图片 -->
+  <view class="goods_img_wrap">
+    <image mode="widthFix" src="{{item.oGoodsImages.oUrl}}"></image>
+  </view>
+<!-- 右侧文字 -->
+<view class="goods_info_wrap">
+<view class="goods_name">{{item.oName}}</view>
+<view class="goods_price">￥{{item.oPrice}}</view>
+</view>
+</navigator>
+</view>
+
+<view wx:else class="null">NULL</view>

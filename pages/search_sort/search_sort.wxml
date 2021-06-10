@@ -1,0 +1,22 @@
+<!--pages/search_sort/search_sort.wxml-->
+<Indexhead language="{{language}}"></Indexhead>
+<view class="sort_wrap">
+  <view 
+  class="sort_goods_item"
+  wx:for="{{SortGoodsList}}"
+  wx:key="{{item.id}}"
+>
+<navigator class="item-wrap"   url="/pages/goods_detail/goods_detail?goods_id={{item.id}}">
+  <!-- 左侧图片 -->
+  <view class="sort_goods_img_wrap">
+    <image mode="widthFix" src="{{item.oGoodsImages.oUrl}}"></image>
+  </view>
+<!-- 右侧文字 -->
+<view class="sort_info_wrap">
+<view class="sort_goods_name">{{item.oName}}</view>
+<view class="sort_goods_price">￥{{item.oPrice}}</view>
+</view>
+
+</navigator>
+</view>
+</view>

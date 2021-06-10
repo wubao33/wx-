@@ -1,0 +1,67 @@
+/* pages/sort_goods.wxss */
+.search_row{
+  height: 90rpx;
+  display: flex;
+  padding: 10rpx;
+}
+.search_row input{
+  background-color: #fff;
+  flex: 1;
+  height: 100%;
+  padding-left: 20rpx;
+  border: 2rpx solid rgb(240, 200, 200);
+  border-radius: 30rpx;
+  
+}
+.search_row button{
+  width: 110rpx;
+  height: 100%;
+  font-size: 28rpx;
+  padding: 0;
+  margin: 0 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+}
+/* 商品列表 */
+.goods_item{
+  display: flex;
+  border-bottom: 1rpx solid #ccc;
+ padding:10rpx 0;
+}
+.goods_item .goods_img_wrap{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_item .goods_img_wrap image{
+  width: 100%;
+}
+.goods_item .goods_info_wrap{
+  margin-left: 10rpx;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goods_info_wrap .goods_name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+}
+.goods_info_wrap .goods_price{
+  color:red;
+  font-size: 32rpx;
+}
+.null{
+  width: 100%;
+  height: 50vh;
+  line-height: 50vh;
+  text-align: center;
+  font-size: 40rpx;
+  color: #ccc;
+}

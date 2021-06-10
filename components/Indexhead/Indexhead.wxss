@@ -1,0 +1,39 @@
+/* components/Indexhead.wxss */
+.logo{
+  margin: 25rpx 0;
+  height: 60rpx;
+  text-align: center;
+}
+.logoimage{
+  width: 33%;
+}
+.title_wrap{
+  text-align: center;
+}
+.title_wrap .big_title{
+  font-size: 60rpx;
+  font-weight: 700;
+  letter-spacing: 15rpx;
+  margin-bottom: 35rpx;
+}
+.title_wrap .small_title{
+    font-size: 35rpx;
+    margin: 0 30rpx;
+    font-weight: 600;
+    font-style: oblique;
+    letter-spacing: 10rpx;
+    margin-bottom: 35rpx;
+
+}
+.enbig_title{
+  font-size: 50rpx;
+  font-weight: 700;
+  margin-bottom: 35rpx;
+}
+.ensmall_title{
+  font-size: 35rpx;
+  margin: 0 30rpx;
+  font-weight: 600;
+  font-style: oblique;
+  margin-bottom: 35rpx;
+}

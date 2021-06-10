@@ -1,0 +1,21 @@
+<!--components/Indexhead.wxml-->
+<view class="index_head">
+<!-- logo -->
+<view class="logo">
+  <navigator class="logo_image" open-type="switchTab" url="../../pages/index/index">
+  <image class="logoimage" mode="widthFix" src="../../logo/santic-logo-l.png"></image>
+  </navigator>
+</view>
+<!-- title -->
+<view class="title_wrap">
+  <!-- <view class="big_title">·森地客定制·</view> -->
+  <view wx:if="{{language=='chinese'}}">
+  <view class="big_title">·森地客定制·</view>
+  <view class="small_title">骑/享/自/由</view>
+</view>
+<view wx:else>
+  <view class="enbig_title">WELCOME TO SANTIC CUSTOM</view>
+  <view class="ensmall_title">Cycling for freedom</view>
+</view>
+</view>
+</view>

@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search_sort/search_sort",
+    "pages/category/category",
+    "pages/goods_detail/goods_detail",
+    "pages/sort_goods/sort_goods"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Santic",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+
+    "color": "#999999",
+    "selectedColor": "#111",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icon/home.png",
+        "selectedIconPath": "./icon/home1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "./icon/menu.png",
+        "selectedIconPath": "./icon/menu_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

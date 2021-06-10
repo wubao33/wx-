@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Signup":"../../components/Signup/Signup",
+    "Indexhead":"../../components/Indexhead/Indexhead"
+  }
+}

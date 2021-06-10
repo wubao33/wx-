@@ -1,0 +1,234 @@
+<!--index.wxml-->
+<view wx:if="{{language=='chinese'}}"  >
+<!-- 头部 -->
+<view class="index_head">
+<!-- logo -->
+<view class="logo">
+  <view class="logo_search">
+    <navigator open-type="navigate" url="../sort_goods/sort_goods">
+  <image class="search_image" src="../../logo/search.svg"></image>
+  </navigator>
+  </view>
+  <navigator class="logo_image" open-type="switchTab" url="../../pages/index/index">
+  <image class="logoimage" mode="widthFix" src="../../logo/santic-logo-l.png"></image>
+  </navigator>
+  <view class="logo_language">
+  <image bindtap="handleLanguage" class="language_image" src="../../logo/earch.svg"></image>
+  </view>
+</view>
+<view class="language_select">
+  <view class="languagestyle {{languageshow?'language':''}}" data-value="chinese" bindtap="handleSelect">中文</view>
+  <view class="languagestyle {{languageshow?'language':''}}" data-value="english" bindtap="handleSelect">英文</view>
+</view>
+<!-- title -->
+<view class="title_wrap">
+  <view class="big_title">·森地客定制·</view>
+  <view class="small_title">骑/享/自/由</view>
+</view>
+</view>
+<view class="title_sort">
+  <view class="children_sort">
+  <navigator class="title_src" url="../../pages/search_sort/search_sort?id=1">儿童定制</navigator>
+  </view>
+  <view class="br">|</view>
+  <view class="man_sort">
+  <navigator class="title_src" url="../../pages/search_sort/search_sort?id=3">成人定制</navigator>
+  </view>
+  </view>
+<!-- 轮播 -->
+<view class="swiper">
+<view class="index_swiper module">
+  <swiper autoplay circular indicator-dots>
+  <swiper-item
+  wx:for="{{swiperList}}"
+  wx:key="*this"
+  >
+<image mode="widthFix" src="{{item}}"></image>
+  </swiper-item>
+  </swiper>
+</view>
+</view>
+<!-- 推荐 -->
+<view class="index_choice module"> 
+  <view class="choice_title module">
+   推荐
+  </view>
+  <view class="main_choice">
+  <view
+  wx:for="{{shopListoHightlight}}"
+  wx:key="id"
+  wx:for-index="index"
+   class="title_item {{index==selectIndex?'active':''}}" 
+   data-index="{{index}}" 
+   bindtap="handleActiveChange"
+   >
+   {{item.oName}}
+   </view>
+  </view>
+
+  <view 
+  wx:for="{{shopListoGoods}}"
+  wx:key="id"
+  wx:for-index="index"
+  class="shop_wrap {{index==selectIndex?'show':''}}"
+  >
+    <view class="shop_image">
+      <image mode="widthFix" src="{{item.oGoodsImages.oUrl}}"></image>
+    </view>
+    <view class="shop_title">{{item.oName}}</view>
+    <view class="shop_price">${{item.oPrice}}</view>
+    <navigator  url="../../pages/goods_detail/goods_detail?goods_id={{item.id}}" > <button class="btn_buy" data-value="{{item.id}}" bindtap="handlebuy">购买</button></navigator>
+</view>
+</view>
+<!-- 定制 -->
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE1.jpg"></image></view>
+  <view class="sort_title">骑行服套装</view>
+    <view class="sort_detail">根据骑行运动时人体各部位的功能需求，3D裁剪专业定制，提升运动舒适性</view>
+    <navigator url="../../pages/search_sort/search_sort?id=14"><view class="sort_href">立即定制</view></navigator>
+</view>
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE2.jpg"></image></view>
+  <view class="sort_title">连体服</view>
+    <view class="sort_detail">速度源于细节，每一件森地客连体服都经过精细调整、精心研发，确保风阻最小化和舒适度最大化</view>
+    <navigator url="../../pages/search_sort/search_sort?id=10"><view class="sort_href">立即定制</view></navigator>
+</view>
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE3.jpg"></image></view>
+  <view class="sort_title">儿童款</view>
+    <view class="sort_detail">面料亲肤，拥有吸湿、排汗、抗菌效果，提供极佳的接触质感和有效支撑，为各种儿童骑行提供显著的防护</view>
+ <navigator url="../../pages/search_sort/search_sort?id=12"><view class="sort_href">立即定制</view></navigator>
+</view>
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE4.jpg"></image></view>
+  <view class="sort_title">骑行配件</view>
+    <view class="sort_detail">一站式齐全的定制服务，能高度满足您的个性需求，实现整套定制一体化</view>
+ <navigator url="../../pages/search_sort/search_sort?id=13"><view class="sort_href">立即定制</view></navigator>
+</view>
+</view>
+
+
+<!-- 英文 页面-->
+<view wx:else >
+<!-- 头部 -->
+<view class="index_head">
+<!-- logo -->
+<view class="logo">
+  <view class="logo_search">
+    <navigator open-type="navigate" url="../sort_goods/sort_goods">
+  <image class="search_image" src="../../logo/search.svg"></image>
+  </navigator>
+  </view>
+  <navigator class="logo_image" open-type="switchTab" url="../../pages/index/index">
+  <image class="logoimage" mode="widthFix" src="../../logo/santic-logo-l.png"></image>
+  </navigator>
+  <view class="logo_language">
+  <image bindtap="handleLanguage" class="language_image" src="../../logo/earch.svg"></image>
+  </view>
+</view>
+<view class="language_select">
+  <view class="languagestyle {{languageshow?'language':''}}" data-value="chinese" bindtap="handleSelect">chinese</view>
+  <view class="languagestyle {{languageshow?'language':''}}" data-value="english" bindtap="handleSelect">english</view>
+</view>
+<!-- title -->
+
+<view class="title_wrap">
+  <view class="enbig_title">WELCOME TO SANTIC CUSTOM</view>
+  <view class="ensmall_title">Cycling for freedom</view>
+</view>
+</view>
+
+<view class="title_sort">
+  <view class="children_sort">
+  <navigator class="title_src" url="../../pages/search_sort/search_sort?id=1">Child</navigator>
+  </view>
+  <view class="br">|</view>
+  <view class="man_sort">
+  <navigator class="title_src" url="../../pages/search_sort/search_sort?id=3">Adult</navigator>
+  </view>
+  </view>
+<!-- 轮播 -->
+<view class="swiper">
+<view class="index_swiper module">
+  <swiper autoplay circular indicator-dots>
+  <swiper-item
+  wx:for="{{swiperList}}"
+  wx:key="*this"
+  >
+<image mode="widthFix" src="{{item}}"></image>
+  </swiper-item>
+  </swiper>
+</view>
+</view>
+<!-- 推荐 -->
+<view class="index_choice module"> 
+  <view class="choice_title module">
+    Recommend
+  </view>
+  <view class="main_choice">
+  <view
+  wx:for="{{shopListoHightlight}}"
+  wx:key="id"
+  wx:for-index="index"
+   class="title_item {{index==selectIndex?'active':''}}" 
+   data-index="{{index}}" 
+   bindtap="handleActiveChange"
+   >
+   {{item.oName}}
+   </view>
+  </view>
+
+  <view 
+  wx:for="{{shopListoGoods}}"
+  wx:key="id"
+  wx:for-index="index"
+  class="shop_wrap {{index==selectIndex?'show':''}}"
+  >
+    <view class="shop_image">
+      <image mode="widthFix" src="{{item.oGoodsImages.oUrl}}"></image>
+    </view>
+    <view class="shop_title">{{item.oName}}</view>
+    <view class="shop_price">${{item.oPrice}}</view>
+    <navigator  url="../../pages/goods_detail/goods_detail?goods_id={{item.id}}" > <button class="btn_buy" data-value="{{item.id}}" bindtap="handlebuy">buy</button></navigator>
+</view>
+</view>
+<!-- 定制 -->
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE1.jpg"></image></view>
+  <view class="sort_title">Cycling Suit</view>
+    <view class="sort_detail">According to the functional requirements of various parts of the human body during cycling, 3D cutting is professionally customized to improve sports comfort.</view>
+   <navigator url="../../pages/search_sort/search_sort?id=14"><view class="sort_href">Customize Now</view></navigator>
+</view>
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE2.jpg"></image></view>
+  <view class="sort_title">Jumpsuit</view>
+    <view class="sort_detail">Speed comes from details. Every sendike one-piece suit has been carefully adjusted and developed to minimize wind resistance and maximize comfort.</view>
+   <navigator url="../../pages/search_sort/search_sort?id=10"><view class="sort_href">Customize Now</view></navigator>
+</view>
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE3.jpg"></image></view>
+  <view class="sort_title">Children's Fund</view>
+    <view class="sort_detail">The fabric is skin friendly, with moisture absorption, perspiration, antibacterial effect, providing excellent contact texture and effective support, providing significant protection for all kinds of children riding.</view>
+   <navigator url="../../pages/search_sort/search_sort?id=12"><view class="sort_href">Customize Now</view></navigator>
+</view>
+<view class="index_sort module">
+ <view class="sort_image"><image src="http://static1.santic.com/%E4%B8%BB%E5%9B%BE4.jpg"></image></view>
+  <view class="sort_title">Riding Accessories</view>
+    <view class="sort_detail">The one-stop complete customized service can highly meet your individual needs and realize the integration of the whole set of customization.</view>
+   <navigator url="../../pages/search_sort/search_sort?id=13"><view class="sort_href">Customize Now</view></navigator>
+</view>
+
+
+
+
+<!-- 报名 -->
+</view>
+
+<view class="video_list">
+<view class="module">
+  <video src="http://static1.santic.com/video1.webm" poster="http://static1.santic.com/%E4%B8%8A%E6%B5%B71.jpg" ></video>
+  <video src="http://static1.santic.com/video2.webm" poster="http://static1.santic.com/%E4%B8%8A%E6%B5%B72.jpg"></video>
+  <video src="http://static1.santic.com/video3.webm" poster="http://static1.santic.com/%E4%B8%8A%E6%B5%B73.jpg"></video>
+</view>
+</view>
+<Signup language="{{language}}"></Signup>

@@ -1,0 +1,81 @@
+/* pages/category/category.wxss */
+page{
+  height: 100%;
+}
+.cates{
+  height: 100%;
+}
+.cates .cates_container{
+  height: calc( 100vh - 90rpx);
+  display: flex;
+}
+.cates .cates_container .left_menu{
+  flex: 2;
+  background-color: #faf8f8f8;
+}
+.cates .cates_container .left_menu .menu_item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.left_big_menu,.left_sml_menu{
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  text-indent:30rpx
+}
+.left_sml_wrap{
+  width: 100%;
+  text-indent:30rpx
+}
+.left_sml_menu{
+  display: none;
+  text-align: center;
+}
+.cates .cates_container .right_container{
+  flex: 6;
+}
+/* 右边商品 */
+.goods_item{
+ padding:10rpx 0;
+}
+.goods_item .goods_img_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_item .goods_img_wrap image{
+  width: 80%;
+}
+.goods_item .goods_info_wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding:0 10%;
+  font-size: 30rpx;
+}
+.goods_info_wrap .goods_name{
+  margin: 30rpx 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+}
+.goods_info_wrap .goods_price{
+  margin-bottom: 30rpx;
+  text-align: center;
+  color: red;
+}
+
+.active{
+  color:red;
+}
+.show{
+  display: block;
+  background-color: #ffffff;
+}
+.titleHide{
+  display: none;
+}

@@ -1,0 +1,40 @@
+/* pages/search_sort/search_sort.wxss */
+page{
+    background-color: #F7F7F7;
+    padding: 20rpx 0;
+}
+
+
+/* sort */
+.sort_wrap{
+  width: 100%;
+}
+.sort_goods_item{
+  width: 48%;
+  display: inline-block;
+  border-radius: 10rpx;
+  background-color:white;
+ margin: 10rpx 1%;
+ padding: 15rpx;
+}
+.sort_goods_img_wrap{
+  width: 100%;
+}
+.sort_goods_img_wrap image{
+  width: 100%;
+}
+.sort_goods_name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 30rpx;
+  margin: 20rpx 0;
+
+}
+.sort_goods_price{
+  text-align: center;
+  color: red;
+  font-size: 25rpx;
+  margin: 20rpx 0;
+}

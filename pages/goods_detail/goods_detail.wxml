@@ -1,0 +1,85 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<Indexhead language="{{language}}"></Indexhead>
+<view class="detail_swiper">
+  <swiper autoplay circular>
+    <swiper-item
+    wx:for="{{goodsImage}}"
+    wx:key="*this"
+    bindtap="handlePrevewImage"
+    data-url="{{item.oUrl}}"
+    >
+      <image mode="widthFix" src="{{item.oUrl}}"></image>
+      <view class='rLInedx'>{{index + 1}}/{{goodsImage.length}}</view>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="goodsInfo">
+<view class="goods_name">{{GoodsInfo.oName}}</view>
+<view class="goods_price">￥{{GoodsInfo.oPrice}}</view>
+</view>
+<view class="goods-wrap">
+<view class="goods_size">
+   <view class="configuration_size">
+   <text class="configuration_type">可选款式:</text>
+   <text class="edition">普通版</text>
+   <text class="edition">专业版</text>
+   <text class="edition">竞赛版</text>
+   </view>
+</view>
+<view class="main_size">
+   <text class="main_type">可选尺码:</text>
+   <view class="size_wrap">
+   <text class="size"
+   wx:for="{{oSize}}"
+   wx:key="*this"
+   >{{item}}</text>
+  </view>
+</view>
+</view>
+
+<view class="detail_image"
+wx:for="{{infoImage}}"
+wx:key="*this"
+>
+<image mode="widthFix" src="{{item.oUrl}}"></image>
+</view>
+
+
+
+<view wx:if="{{language=='chinese'}}">
+<view class="btm_tool">
+  <view class="tool_item">
+    编号:{{goodsId}}
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+
+  <view class="tool_item btn_buy">
+     <view class="iconfont"></view>
+    <view>定制/咨询</view>
+    <button open-type="contact"></button>
+  </view>
+</view>
+</view>
+<view wx:else>
+  <view class="btm_tool">
+  <view class="tool_item">
+    Id:{{goodsId}}
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>Share</view>
+    <button open-type="share"></button>
+  </view>
+
+  <view class="tool_item btn_buy">
+     <view class="iconfont"></view>
+    <view>Consulting</view>
+    <button open-type="contact"></button>
+  </view>
+</view>
+
+</view>

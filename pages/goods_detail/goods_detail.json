@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Indexhead":"../../components/Indexhead/Indexhead"
+  },
+  "navigationBarTitleText": "商品详情"
+}

@@ -1,0 +1,46 @@
+<!--pages/category/category.wxml-->
+<view class="cates">
+  <SearchInput></SearchInput>
+<!-- 左侧 -->
+<view class="cates_container">
+ <scroll-view  class="left_menu" scroll-y>
+  <view class="menu_item"
+  wx:for="{{leftcates}}"
+  wx:key="*this"
+  bindtap="handleItem"
+  data-value="{{index}}"
+  >
+
+  <view class="left_big_menu">{{item.oName}}</view>
+  <view class="left_sml_wrap {{item.select?'':'titleHide'}}">
+  <view class="left_sml_menu show"
+  wx:for="{{item.oCategorySubs}}" wx:for-item="oCategorySubs" wx:key="id"
+  >
+  <view  catchtap="handleSelect" data-value="{{oCategorySubs.id}}" class="{{oCategorySubs.id===selectIndex?'active':''}}">{{oCategorySubs.oCnName}}</view>
+  </view>
+</view>
+  </view>
+  </scroll-view>
+  <!-- 右侧商品-->
+  <scroll-view scroll-y scroll-top="{{scrollTop}}" class="=right_container">
+    <view class="goods">
+<navigator 
+class="goods_item"
+wx:for="{{rightcates}}"
+wx:key="id"
+url="/pages/goods_detail/goods_detail?goods_id={{item.id}}"
+>
+  <!-- 左侧图片 -->
+  <view class="goods_img_wrap">
+    <image mode="widthFix" src="{{item.oGoodsImages.oUrl?item.oGoodsImages.oUrl:'http://static1.santic.com/58907507cdf81bf65.jpg?imageView2/5/w/274/h/274/q/100'}}"></image>
+  </view>
+<!-- 右侧文字 -->
+<view class="goods_info_wrap">
+<view class="goods_name">{{item.oName}}</view>
+<view class="goods_price">￥{{item.oPrice}}</view>
+</view>
+</navigator>
+</view>
+  </scroll-view>
+</view>
+</view>

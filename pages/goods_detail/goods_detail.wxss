@@ -1,0 +1,133 @@
+/* pages/goods_detail/goods_detail.wxss */
+page{
+  padding-bottom: 90rpx;
+}
+.detail_swiper swiper{
+  height: 90vw;
+  text-align: center;
+  padding: 0 20rpx;
+}
+.detail_swiper image{
+  width: 90%;
+}
+.goods_name,.goods_price{
+  margin: 20rpx 0;
+}
+.goods_name{
+  margin:0 30rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_price{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.goods_size ,.main_size{
+ margin: 20rpx 0;
+}
+.configuration_type{
+  height: 35rpx;
+  font-size: 35rpx;
+  margin-right: 20rpx;
+}
+.edition{
+  margin: 0 10rpx;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  padding: 2.5rpx;
+}
+.goodsInfo,.goods-wrap{
+  margin: 0 30rpx;
+  padding: 10rpx;
+}
+.goods-wrap{
+
+  margin-bottom: 50rpx;
+}
+.main_size{
+  display: flex;
+}
+.main_type{
+  padding-top: 29rpx;
+  flex: 1;
+  font-size: 35rpx;
+}
+.size_wrap{
+  flex: 3;
+}
+.size{
+  display: inline-block;
+  line-height: 90rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border: 1rpx solid black;
+  border-radius: 45rpx;
+  text-align: center;
+  font-size: 25rpx;
+  font-weight: bold;
+  margin:10rpx;
+}
+/* 详情图片 */
+.detail_image image{
+  width: 100%;
+}
+
+/* 底部 */
+.btm_tool{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  border-top: 1rpx solid #cccccc;
+}
+.btm_tool .tool_item{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tool_item{
+  border-right: 1rpx solid #cccccc;
+}
+.btm_tool .tool_item button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.btm_tool .btn_buy{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e43854;
+  color: #fff;
+  font-size:30rpx;
+  font-weight: 600;
+}
+
+
+.rLInedx{
+  color: black;
+  position: fixed;
+  right: 80rpx;
+  bottom: 60rpx;
+  font-size: 30rpx;
+}

@@ -1,0 +1,57 @@
+<!--components/Signup/Signup.wxml-->
+<view wx:if="{{language=='chinese'}}"  >
+<view class="form">
+<view class="form_title">订阅森地客产品期刊</view>
+<view class="form_input">
+<view class="email">邮箱地址</view>
+<input type="text"  value="{{emailValue}}" class="input {{emaliSuc?'worn':''}}" placeholder="输入邮箱" bindblur="handleGetemali"/>
+<view class="phone">手机号</view>
+<input type="text" value="{{phoneValue}}"  placeholder="输入手机号" class="input" bindblur="handleGetphone"/>
+<view class="select">选择订阅内容</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{allselected}}">
+    <view class="picker">
+    {{userInfo.type}}
+    </view>
+  </picker>
+
+</view>
+<view class="btn1">
+<view  wx:if="{{iswornning}}">
+  <button size="mini" type="primary" disabled="true">请输入信息</button>
+  </view>
+  <view wx:else bindtap="handleset">
+    <button  size="mini" type="primary">报名</button>
+  </view>
+</view>
+</view>
+</view>
+
+<view wx:else >
+<view class="form">
+<view class="form_title">订阅森地客产品期刊</view>
+<view class="form_input">
+<view class="email">e-mail address</view>
+<input type="text"  value="{{emailValue}}" class="input {{emaliSuc?'worn':''}}" placeholder="Enter your email address" bindblur="handleGetemali"/>
+<view class="phone">
+cell-phone number</view>
+<input type="text" value="{{phoneValue}}"  placeholder="Enter mobile phone number" class="input" bindblur="handleGetphone"/>
+<view class="select">Select subscription</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{enallselected}}">
+    <view class="picker">
+    {{userInfo.type}}
+    </view>
+  </picker>
+
+</view>
+<view class="btn1">
+<view  wx:if="{{iswornning}}">
+  <button size="mini" type="primary" disabled="true">enter the information</button>
+  </view>
+  <view wx:else bindtap="handleset">
+    <button  size="mini" type="primary">SIGN UP</button>
+  </view>
+</view>
+</view>
+</view>
+
+
